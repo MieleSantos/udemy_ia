@@ -1,0 +1,4 @@
+{
+    "isort.check": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+}
