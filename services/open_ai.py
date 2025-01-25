@@ -19,9 +19,17 @@ class AssistentIA:
     def chat_input(self, message: str):
         completion = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": message}],
+            # messages=[{"role": "user", "content": message}],
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": message},
+            ],
         )
 
         return completion.choices[0].message
 
-    # return completion.choices[0].message.content
+    def chat_moderation(self, message: str):
+        response = self.client.moderations.create(
+            model="omni-moderation-latest", input=message
+        )
+        return response
