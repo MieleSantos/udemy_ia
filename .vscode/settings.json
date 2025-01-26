@@ -1,4 +1,11 @@
 {
     "isort.check": true,
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnType": true,
+    "notebook.diff.overviewRuler": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "debug.showBreakpointsInOverviewRuler": true,
+    "editor.rulers": [
+        88
+    ]
 }

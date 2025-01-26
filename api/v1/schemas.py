@@ -2,12 +2,12 @@ from pydantic import BaseModel, field_validator
 
 
 class PromptBase(BaseModel):
-    prompt_image: str
+    prompt: str
 
-    @field_validator("prompt_image")
+    @field_validator("prompt")
     def prompt_image(cls, v):
         if not v:
-            raise ValueError("prompt_image is required")
+            raise ValueError("prompt is required")
         return v
 
 

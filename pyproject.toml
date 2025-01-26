@@ -12,6 +12,11 @@ openai = "^1.60.0"
 python-dotenv = "^1.0.1"
 
 
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.14.1"
+ruff = "^0.9.3"
+isort = "^5.13.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
