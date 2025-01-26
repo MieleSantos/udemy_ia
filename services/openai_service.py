@@ -7,6 +7,7 @@ from openai import OpenAI
 class AssistentIA:
     def __init__(self):
         self._set_env()
+
         self.client = OpenAI()
 
     def _set_env(self):
@@ -31,5 +32,15 @@ class AssistentIA:
     def chat_moderation(self, message: str):
         response = self.client.moderations.create(
             model="omni-moderation-latest", input=message
+        )
+        return response
+
+    def image_generation(self, prompt_image: str):
+        response = self.client.images.generate(
+            model="dall-e-3",
+            prompt=prompt_image,
+            size="1024x1024",
+            quality="standard",
+            n=1,
         )
         return response

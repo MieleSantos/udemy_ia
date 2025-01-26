@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
-from udemy_ia.services.open_ai import AssistentIA
+from udemy_ia.services.openai_service import AssistentIA
+
 
 router = APIRouter()
 
