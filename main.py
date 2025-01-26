@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
-from udemy_ia.api.routers import router
+
+from app.api.routers import router
 
 app = FastAPI(
     description="This is an API to interact with the OpenAI model",

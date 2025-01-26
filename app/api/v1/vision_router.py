@@ -1,7 +1,8 @@
 from fastapi import APIRouter, HTTPException
 
-from udemy_ia.api.v1.schemas import ImageSchemaResponse, PromptBase
-from udemy_ia.services.openai_service import AssistentIA
+from app.api.v1.schemas import ImageSchemaResponse, PromptBase
+
+from app.services.openai_service import AssistentIA
 
 router = APIRouter()
 
