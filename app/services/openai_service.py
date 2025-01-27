@@ -2,6 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from openai import OpenAI
+import io
 
 
 class AssistentIA:
@@ -44,3 +45,11 @@ class AssistentIA:
             n=1,
         )
         return response
+
+    def audio_generation(self, prompt_audio: str):
+        response = self.client.audio.speech.create(
+            model="tts-1",
+            input=prompt_audio,
+            voice="echo",
+        )
+        return io.BytesIO(response.content)
