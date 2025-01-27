@@ -6,6 +6,8 @@ Este projeto consiste em uma API desenvolvida com **FastAPI**, **Poetry** e **Do
 1. **Chat de texto**: Para interação com modelos de linguagem.
 2. **Moderação**: Para análise e moderação de conteúdo.
 3. **Geração de imagens**: Para criar imagens a partir de descrições textuais.
+4. **Transcrição de audio**: Para transcrever audio para texto.
+5. **Tradução de audio**: Para tradução audio.
 
 ---
 
