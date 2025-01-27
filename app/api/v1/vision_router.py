@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException
 
 from app.api.v1.schemas import ImageSchemaResponse, PromptBase
-
 from app.services.openai_service import AssistentIA
 
 router = APIRouter()
