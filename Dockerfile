@@ -22,4 +22,3 @@ EXPOSE 8080
 # Comando para rodar a aplicação
 CMD ["poetry", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
 
-# CMD ["fastapi", "run","main.py", "--host", "0.0.0.0","--port", "8080"]
