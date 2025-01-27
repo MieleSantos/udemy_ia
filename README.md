@@ -64,7 +64,9 @@ Este projeto consiste em uma API desenvolvida com **FastAPI**, **Poetry** e **Do
 │   ├── api/
 |   |   ├── routers.py    
 │   │   └── v1/
+│   │       ├── audio_router.py        # Rota para audio
 │   │       ├── text_router.py        # Rota para chat de texto
+│   │       ├── vision_router.py        # Rota para gera imagem   
 │   ├── services/
 │   │   └── openai_service.py # Serviços da OpenAI
 │   └── Dockerfile              # Configuração do Docker
