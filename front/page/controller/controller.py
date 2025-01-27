@@ -10,3 +10,12 @@ class Api:
         if response.status_code != 200:
             return response.text
         return response.json()
+
+    def create_image(self, prompt: str):
+        response = requests.post(
+            f"{url}/api/v1/image/generation", json={"prompt": prompt}
+        )
+
+        if response.status_code != 200:
+            return response.text
+        return response.json()["url"]
