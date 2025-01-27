@@ -1,8 +1,8 @@
+import io
 import os
 
 from dotenv import load_dotenv
 from openai import OpenAI
-import io
 
 
 class AssistentIA:
@@ -53,3 +53,18 @@ class AssistentIA:
             voice="echo",
         )
         return io.BytesIO(response.content)
+
+    def audio_transcription(self, prompt_audio: io.BytesIO):
+        transcription = self.client.audio.transcriptions.create(
+            model="whisper-1",
+            file=prompt_audio,
+            language="en",
+        )
+        return transcription.text
+
+    def audio_translations(self, prompt_audio: io.BytesIO):
+        transcription = self.client.audio.translations.create(
+            model="whisper-1",
+            file=prompt_audio,
+        )
+        return transcription.text
