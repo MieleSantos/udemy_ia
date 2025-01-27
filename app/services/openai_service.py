@@ -28,7 +28,7 @@ class AssistentIA:
             ],
         )
 
-        return completion.choices[0].message
+        return completion.choices[0].message.content
 
     def chat_moderation(self, message: str):
         response = self.client.moderations.create(
