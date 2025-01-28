@@ -58,7 +58,7 @@ class AssistentIA:
         transcription = self.client.audio.transcriptions.create(
             model="whisper-1",
             file=prompt_audio,
-            language="en",
+            language="pt",
         )
         return transcription.text
 

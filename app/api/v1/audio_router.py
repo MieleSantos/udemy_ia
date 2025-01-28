@@ -33,7 +33,7 @@ async def transcription_input(file_upload: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    return audio_text
+    return {"transcricao": audio_text}
 
 
 @router.post(
@@ -48,4 +48,4 @@ async def translations_input(file_upload: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    return audio_text
+    return {"translations": audio_text}

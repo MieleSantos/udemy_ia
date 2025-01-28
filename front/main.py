@@ -8,8 +8,14 @@ image_create_page = st.Page(
     "page/image_page.py", title="Create image", icon=":material/add_circle:"
 )
 
+transcricao_page = st.Page(
+    "page/transcricao_page.py",
+    title="Transcrição de audio",
+    icon=":material/add_circle:",
+)
 
-pg = st.navigation([chat_text_page, image_create_page])
+
+pg = st.navigation([chat_text_page, image_create_page, transcricao_page])
 
 st.set_page_config(page_title="Data manager", page_icon=":material/edit:")
 pg.run()
