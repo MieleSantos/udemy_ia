@@ -1,6 +1,6 @@
 import streamlit as st
 
-from page.controller.controller import Api
+from page.controller.controller import ApiText
 
 st.title("💬 Chatbot")
 if "messages" in st.session_state:
@@ -17,7 +17,7 @@ for msg in st.session_state.messages:
 if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
-    response = Api().chat_input(prompt)
+    response = ApiText().chat_input(prompt)
 
     st.session_state.messages.append({"role": "assistant", "content": response})
     st.chat_message("assistant").write(response)

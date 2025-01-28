@@ -34,7 +34,7 @@ class AssistentIA:
         response = self.client.moderations.create(
             model="omni-moderation-latest", input=message
         )
-        return response
+        return response.model_dump()
 
     def image_generation(self, prompt_image: str):
         response = self.client.images.generate(

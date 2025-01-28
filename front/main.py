@@ -1,21 +1,35 @@
 import streamlit as st
 
 
-chat_text_page = st.Page(
-    "page/text_page.py", title="Chatbot", icon=":material/add_circle:"
-)
-image_create_page = st.Page(
-    "page/image_page.py", title="Create image", icon=":material/add_circle:"
-)
+pages = {
+    "Chat de texto": [
+        st.Page("page/text_page.py", title="Chatbot", icon=":material/chat:"),
+        st.Page(
+            "page/moderation_page.py",
+            title="Moderação de texto",
+            icon=":material/chat:",
+        ),
+        st.Page(
+            "page/image_page.py",
+            title="Crieção de imagem",
+            icon=":material/chat:",
+        ),
+    ],
+    "Chat de audio": [
+        st.Page(
+            "page/transcricao_page.py",
+            title="Transcrição de audio",
+            icon=":material/chat:",
+        ),
+        st.Page(
+            "page/translations_page.py",
+            title="Transcrição de audio",
+            icon=":material/chat:",
+        ),
+    ],
+}
 
-transcricao_page = st.Page(
-    "page/transcricao_page.py",
-    title="Transcrição de audio",
-    icon=":material/add_circle:",
-)
-
-
-pg = st.navigation([chat_text_page, image_create_page, transcricao_page])
-
+pg = st.navigation(pages)
 st.set_page_config(page_title="Data manager", page_icon=":material/edit:")
+
 pg.run()

@@ -48,4 +48,4 @@ async def translations_input(file_upload: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    return {"translations": audio_text}
+    return {"traduzindo": audio_text}
