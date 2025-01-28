@@ -91,6 +91,3 @@ Este projeto consiste em uma API desenvolvida com **FastAPI**, **Poetry**, **str
 ## Licença
 
 Este projeto está licenciado sob a MIT License.
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lnaHsoK3sVA?si=ZJ2fJESebUk_EJxp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
