@@ -1,6 +1,6 @@
 import requests
 
-url = "http://localhost:8080"
+url = "http://api:8000"
 
 
 class ApiText:

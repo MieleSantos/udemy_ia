@@ -11,7 +11,7 @@ pages = {
         ),
         st.Page(
             "page/image_page.py",
-            title="Crieção de imagem",
+            title="Criação de imagem",
             icon=":material/chat:",
         ),
     ],
@@ -23,7 +23,7 @@ pages = {
         ),
         st.Page(
             "page/translations_page.py",
-            title="Transcrição de audio",
+            title="Tradução de audio",
             icon=":material/chat:",
         ),
     ],
