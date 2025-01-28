@@ -23,6 +23,12 @@ async def chat_input(prompt: PromptBase):
 async def moderactions_input(prompt: PromptBase):
     try:
         response = assistent.chat_moderation(prompt.prompt)
+
+        moderacao = {}
+        for i in response["results"]:
+            for j in i["categories"].items():
+                if j[1] is True:
+                    moderacao[j[0]] = j[1]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    return response
+    return {"moderacao": moderacao}
