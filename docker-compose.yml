@@ -1,0 +1,27 @@
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    command: poetry run uvicorn main:app --host 0.0.0.0 --port 8000
+    networks:
+      - apiNetwork
+    
+  front:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    command: poetry run streamlit run front/main.py --server.port 8501
+    depends_on:
+      - api
+
+    networks:
+      - apiNetwork
+
+networks:
+  apiNetwork:
+    driver: bridge

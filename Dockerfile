@@ -17,8 +17,4 @@ RUN poetry install --no-root
 COPY . .
 
 # Exponha a porta da aplicação
-EXPOSE 8080
-
-# Comando para rodar a aplicação
-CMD ["poetry", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
-
+EXPOSE 8000
