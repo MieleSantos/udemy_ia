@@ -2,10 +2,15 @@ import streamlit as st
 from page.controller.controller import Api
 
 st.title("💬 Criação de image")
+if "messages" in st.session_state:
+    st.session_state.pop("messages")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "assistant", "content": "How can I help you?"}
+        {
+            "role": "assistant",
+            "content": "Vamos criar uma imagem! Digite o que você deseja na imagem.",
+        }
     ]
 
 for msg in st.session_state.messages:
